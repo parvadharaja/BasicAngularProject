@@ -1,0 +1,24 @@
+<!-- <div>Hello Parvath -{{title}}</div> -->
+<!-- <app-hello></app-hello> -->
+<!-- <app-employe-list></app-employe-list> -->
+<div style="padding: 5px;">
+    <!-- <button *ngIf="loggedIn" (click)="logout_()" style="float: right;">logout</button> -->
+    <button mat-raised-button color="warn" *ngIf="loggedIn" (click)="logout_()" style="float: right;">logout</button>
+    <ul *ngIf="loggedIn" class="nav nav-tabs">
+        <li class="nav-item" routerlinkAcive="active"><a class="nav-link " routerLink="home">Home Page</a></li>
+        <li class="nav-item" routerlinkAcive="active"><a class="nav-link" routerLink="empdetails">Details Page</a></li>
+        <li class="nav-item" routerlinkAcive="active"><a class="nav-link" routerLink="empcreatedetails">Create Details Page</a></li>
+    </ul>
+   
+    <!-- <div *ngIf="loggedIn">
+        <mat-tab-group>
+            <mat-tab label="Home Page"> <a routerLink="home"></a> </mat-tab>
+            <mat-tab label="Details Page"> <a routerLink="empdetails"></a> </mat-tab>
+            <mat-tab label="Create Details Page"><a routerLink="empcreatedetails"></a></mat-tab>
+        </mat-tab-group>
+    </div> -->
+    <router-outlet></router-outlet>
+   
+</div>
+
+

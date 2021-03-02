@@ -1,0 +1,32 @@
+<div style="width:98%;">
+    <mat-grid-list cols="2">
+        <mat-grid-tile class="border_">
+            <img src="/assets/Netowrk_illustration.jpg" width="auto" height="aut0">
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <div class="parent_">
+                <div class="child_">
+                    <div>
+                        <mat-form-field appearance="fill"  style="width: 243px;">
+                            <mat-label>Username</mat-label>
+                            <input #userName matInput>
+                        </mat-form-field>
+                    </div>
+                    <div style=" float: left;">
+                        <mat-form-field appearance="fill"  >
+                            <mat-label>Enter your password</mat-label>
+                            <input #password matInput [type]="hide ? 'password' : 'text'">
+                            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                                [attr.aria-pressed]="hide">
+                                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                            </button>
+                        </mat-form-field>
+                    </div>
+                    <div style="text-align: center;">
+                        <button mat-raised-button color="accent" (click)="onClick(userName.value,password.value)">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>

@@ -1,0 +1,17 @@
+table,thead{
+    color: black;
+    font-size: large;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+td,thead{
+    border: 1px solid #369;
+}
+
+.center{
+    text-align: center;
+    justify-content: center;
+    display: grid;
+    padding-top: 5%;
+}
